@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delphi Online IDE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- PrismJS for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <style>
+      /* For Webkit-based browsers (Chrome, Safari) */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1f2937; /* bg-gray-800 */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4b5563; /* bg-gray-600 */
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #6b7280; /* bg-gray-500 */
+      }
+
+      /* Styles for react-simple-code-editor */
+      .code-editor {
+        font-family: 'Fira Code', 'Dank Mono', 'Operator Mono', 'Consolas', 'Menlo', monospace;
+        font-size: 14px;
+        line-height: 1.5;
+        background-color: #2d2d2d !important; /* Prism Tomorrow background */
+        color: #ccc;
+        border-radius: 0 0 0.5rem 0.5rem;
+        overflow: auto !important;
+        flex-grow: 1;
+        outline: none;
+      }
+
+      .code-editor pre[class*="language-"] {
+        white-space: pre !important;
+        word-wrap: normal !important;
+        overflow-wrap: normal !important;
+      }
+
+      .code-editor .prism-editor__textarea:focus {
+        outline: none;
+      }
+
+      .code-editor .prism-editor__container {
+        min-height: 100%;
+      }
+      
+      .token.comment,
+      .token.prolog,
+      .token.doctype,
+      .token.cdata {
+        color: #999;
+      }
+      
+      .resizable-handle-x {
+        cursor: col-resize;
+        width: 6px;
+        background-color: #1f2937;
+        flex-shrink: 0;
+      }
+       .resizable-handle-x:hover {
+        background-color: #3b82f6;
+      }
+      
+      .resize-handle {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: white;
+        border: 1px solid #3b82f6;
+        z-index: 10;
+      }
+      .resize-handle.n { top: -4px; left: 50%; transform: translateX(-50%); cursor: ns-resize; }
+      .resize-handle.s { bottom: -4px; left: 50%; transform: translateX(-50%); cursor: ns-resize; }
+      .resize-handle.e { right: -4px; top: 50%; transform: translateY(-50%); cursor: ew-resize; }
+      .resize-handle.w { left: -4px; top: 50%; transform: translateY(-50%); cursor: ew-resize; }
+      .resize-handle.nw { top: -4px; left: -4px; cursor: nwse-resize; }
+      .resize-handle.ne { top: -4px; right: -4px; cursor: nesw-resize; }
+      .resize-handle.sw { bottom: -4px; left: -4px; cursor: nesw-resize; }
+      .resize-handle.se { bottom: -4px; right: -4px; cursor: nwse-resize; }
+
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
+    "react-simple-code-editor": "https://aistudiocdn.com/react-simple-code-editor@^0.13.1",
+    "prismjs": "https://aistudiocdn.com/prismjs@^1.29.0",
+    "prismjs/": "https://aistudiocdn.com/prismjs@^1.29.0/",
+    "jszip": "https://aistudiocdn.com/jszip@^3.10.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-900">
+    <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-pascal.min.js"></script>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

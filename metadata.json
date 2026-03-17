@@ -1,0 +1,5 @@
+{
+  "name": "Simulador de IDE Delphi",
+  "description": "Um simulador de IDE web para escrever e 'compilar' código Delphi usando IA para análise e execução simulada. Perfeito para aprendizado e prototipagem rápida sem a necessidade de uma instalação completa do Delphi.",
+  "requestFramePermissions": []
+}
